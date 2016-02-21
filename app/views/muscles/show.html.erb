@@ -1,0 +1,31 @@
+<div class="container">
+
+ <h1><%= @muscle.name %></h1>
+  
+  <br>
+  
+  <h3>Symptoms:</h3>
+  <%= markdown(@muscle.symptoms) %>
+  
+  <h3>Common Diagnoses:</h3>
+  <%= markdown(@muscle.common_diagnoses) %>
+  
+  <h3>Causes:</h3>
+  <%= markdown(@muscle.activation)%>
+
+  <h3>Lifestyle Considerations:</h3>
+  <%= markdown(@muscle.lifestyle_considerations) %>
+
+  <h3>Tests:</h3>
+  <%= markdown(@muscle.test) %>
+
+  <h3>Self-Care Treatment:</h3>
+  <%= markdown(@muscle.self_care_treatment) %>
+
+  <h3>Related Muscles:</h3>
+  <%= markdown(@muscle.related_muscles) %>
+
+
+  <%= link_to 'Back', muscles_path %>
+
+<div class="container">

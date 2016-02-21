@@ -1,0 +1,68 @@
+<%= form_for @muscle do |f| %>
+  
+  <% if @muscle.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@muscle.errors.count, "error") %> prohibited
+        this muscle from being saved:
+      </h2>
+      <ul>
+        <% @muscle.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+   <p>
+    <%= f.label :muscle_number %><br>
+    <%= f.text_field :muscle_number %>
+  </p>
+
+  <p>
+    <%= f.label :symptoms %><br>
+    <%= f.text_area :symptoms %>
+  </p>
+
+  <p>
+    <%= f.label :common_diagnoses %><br>
+    <%= f.text_area :common_diagnoses %>
+  </p>
+
+  <p>
+    <%= f.label :causes %><br>
+    <%= f.text_area :activation %>
+  </p>
+
+  <p>
+    <%= f.label :lifestyle_considerations %><br>
+    <%= f.text_area :lifestyle_considerations %>
+  </p>
+
+  <p>
+    <%= f.label :tests %><br>
+    <%= f.text_area :test %>
+  </p>
+
+  <p>
+    <%= f.label :self_care_treatment %><br>
+    <%= f.text_area :self_care_treatment %>
+  </p>
+
+  <p>
+    <%= f.label :related_muscles %><br>
+    <%= f.text_area :related_muscles %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', muscles_path %>
+
