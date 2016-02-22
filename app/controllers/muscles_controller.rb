@@ -46,6 +46,6 @@ class MusclesController < ApplicationController
 
 	private
 		def muscle_params
-			params.require(:muscle).permit(:name, :muscle_number, :symptoms, :common_diagnoses, :activation, :lifestyle_considerations, :test, :self_care_treatment, :related_muscles)
+			params.require(:muscle).permit(:name, :muscle_number, :symptoms, :common_diagnoses, :activation, :lifestyle_considerations, :test, :self_care_treatment, :related_muscles, :quick_reference, :youtube_url)
 		end
 end

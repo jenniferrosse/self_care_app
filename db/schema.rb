@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221002823) do
+ActiveRecord::Schema.define(version: 20160221232430) do
 
   create_table "muscles", force: :cascade do |t|
     t.string   "name"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20160221002823) do
     t.text     "self_care_treatment"
     t.text     "related_muscles"
     t.string   "muscle_number"
+    t.text     "quick_reference"
+    t.string   "youtube_url"
   end
 
   create_table "users", force: :cascade do |t|

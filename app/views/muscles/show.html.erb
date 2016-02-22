@@ -1,9 +1,24 @@
 <div class="container">
 
+
  <h1><%= @muscle.name %></h1>
+ <br>
+
+ <div class="row">
+   <div class="col-xs-12 col-sm-6 col-md-8">
+    
+  <%= markdown(@muscle.quick_reference) %>
+   </div>
   
-  <br>
   
+   <div class="col-xs-6 col-md-4"><%= embed(@muscle.youtube_url) %>  
+   </div>
+   
+</div>
+  
+
+
+
   <h3>Symptoms:</h3>
   <%= markdown(@muscle.symptoms) %>
   
@@ -28,4 +43,4 @@
 
   <%= link_to 'Back', muscles_path %>
 
-<div class="container">
+</div>
