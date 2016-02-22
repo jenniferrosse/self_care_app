@@ -2,16 +2,19 @@
 
   <h1>All Muscles</h1>
 
+<% if user_signed_in? %>
   <%= link_to 'New muscle', new_muscle_path %>
-
+<% end %>
 
   <% @muscles.each do |muscle| %>
-    <h4><%= link_to muscle.name, muscle_path(muscle) %></h4>
+    <h4><%= muscle.muscle_number %>
+        <%= link_to muscle.name, muscle_path(muscle) %></h4>
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_muscle_path(muscle) %>
 <%= link_to 'Delete', muscle_path(muscle),
                 method: :delete,
                 data: { confirm: 'Are you sure?' } %>
 <% end %>
-
+<% end %>
 
 </div>
