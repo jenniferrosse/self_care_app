@@ -1,0 +1,21 @@
+<div class="container">
+
+  <div class="page-header">
+    <h1><%= @symptom.name %></h1>
+  </div>
+  
+  <br>
+
+  <h3>Name:</h3>
+  <%= markdown(@symptom.name) %>
+  
+  <h3>Description</h3>
+  <%= markdown(@symptom.description) %>
+
+
+  <%= link_to 'Back', symptoms_path %>
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_symptom_path %>
+<% end %>
+
+</div>

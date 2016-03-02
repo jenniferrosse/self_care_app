@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'symptoms/index'
+
   devise_for :users
   
 
@@ -6,6 +8,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   resources :muscles
+
+  resources :symptoms
 
   root 'muscles#index'
 

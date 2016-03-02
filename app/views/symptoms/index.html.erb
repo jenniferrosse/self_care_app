@@ -1,0 +1,20 @@
+<div class="container">
+
+  <h1>All Symptoms</h1>
+
+<% if user_signed_in? %>
+  <%= link_to 'New symptom', new_symptom_path %>
+<% end %>
+
+  <% @symptoms.each do |symptom| %>
+    <h4><%= link_to symptom.name, symptom_path(symptom) %></h4>
+
+<% if user_signed_in? %>
+<%= link_to 'Edit', edit_symptom_path(symptom) %>
+<%= link_to 'Delete', symptom_path(symptom),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+<% end %>
+<% end %>
+
+</div>
