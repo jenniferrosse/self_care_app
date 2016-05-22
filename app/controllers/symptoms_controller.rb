@@ -1,6 +1,9 @@
 class SymptomsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :authenticate_admin!, except: [:index, :show]
+  
     def index
-      @symptoms = Symptom.all
+      @symptoms = Symptom.all.order('name DESC')
     end
 
     def show

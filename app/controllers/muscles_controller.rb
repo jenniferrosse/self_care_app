@@ -1,5 +1,6 @@
 class MusclesController < ApplicationController
-	before_action :authenticate_user!, except: [:index, :show]
+	before_action :authenticate_user!
+	before_action :authenticate_admin!, except: [:index, :show]
 
 	def index
 		@muscles = Muscle.all.order("muscle_number")

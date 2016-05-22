@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  get 'muscle_symptoms/index'
+
   get 'symptoms/index'
 
   devise_for :users
@@ -11,13 +14,14 @@ Rails.application.routes.draw do
 
   resources :symptoms
 
-  root 'muscles#index'
+  root 'pages#home'
 
   controller :pages do
   get :home
   # get :about
   get :contact
 end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

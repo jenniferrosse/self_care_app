@@ -12,7 +12,7 @@
      </div>
     
      <div class="col-xs-6 col-md-4">
-       <%= embed(@muscle.youtube_url) %> 
+       <%= embed(@muscle.youtube_url) unless @muscle.youtube_url == nil %> 
      </div> 
   </div>
 
@@ -39,7 +39,7 @@
 
 
   <%= link_to 'Back', muscles_path %>
-<% if user_signed_in? %>
+<% if admin_signed_in? %>
   <%= link_to 'Edit', edit_muscle_path %>
 <% end %>
 
