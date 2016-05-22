@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  resources :muscles
+  resources :muscles do
+    collection { post :import}
+  end
 
   resources :symptoms
 

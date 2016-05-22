@@ -2,6 +2,18 @@
 
   <h1>All Muscles</h1>
 
+  <br>
+  <% if admin_signed_in? %>
+    <h2>Import Muscles</h2>
+  
+    <%= form_tag import_muscles_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Import CSV" %>
+    <% end %>
+  
+    <%= link_to 'New Muscle', new_muscle_path %>
+  <% end %>
+
 <% if admin_signed_in? %>
   <%= link_to 'New muscle', new_muscle_path %>
 <% end %>

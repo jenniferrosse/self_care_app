@@ -6,6 +6,11 @@ class MusclesController < ApplicationController
 		@muscles = Muscle.all.order("muscle_number")
 	end
 
+	def import
+    Muscle.import(params[:file])
+    redirect_to root_url, notice: "Muscles imported."
+  end
+
 	def show
 		@muscle = Muscle.find(params[:id])
 	end
