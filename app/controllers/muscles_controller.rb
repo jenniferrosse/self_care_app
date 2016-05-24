@@ -1,6 +1,6 @@
 class MusclesController < ApplicationController
 	before_action :authenticate_user!
-	before_action :authenticate_admin!, except: [:index, :show]
+	before_action :authenticate_admin!, except: [:index, :show, :search]
 
 	def search
     if params[:search].present?
