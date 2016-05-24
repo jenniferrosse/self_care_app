@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Muscles", muscles_path %></li>
-        <li><%= link_to "Symptoms", symptoms_path %></li>
+        
         <li><%= link_to "Contact", contact_path %></li>
         
         <% if user_signed_in? %>
@@ -24,6 +24,7 @@
          <li><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>
         <% if admin_signed_in? %>
+          <li><%= link_to "Symptoms", symptoms_path %></li>
           <li class="active"><%= link_to "New Muscle", new_muscle_path %></li>
           <li><%= link_to "Sign Out", destroy_admin_session_path, method: :delete %></li>
         <% end %>

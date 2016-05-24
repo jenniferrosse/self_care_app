@@ -2,6 +2,14 @@ class MusclesController < ApplicationController
 	before_action :authenticate_user!
 	before_action :authenticate_admin!, except: [:index, :show]
 
+	def search
+    if params[:search].present?
+        @muscles = Muscle.search(params[:search])
+    else
+        @muscles = Muscle.all.order('muscle_number')
+    end
+  end
+
 	def index
 		@muscles = Muscle.all.order("muscle_number")
 	end

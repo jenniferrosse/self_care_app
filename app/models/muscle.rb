@@ -1,5 +1,10 @@
 class Muscle < ActiveRecord::Base
 
+  def self.search(search)
+    where("name ILIKE ? OR symptoms ILIKE ? OR activation ILIKE ? OR common_diagnoses ILIKE ? OR lifestyle_considerations ILIKE ? OR quick_reference ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+ 
+  end
+
   require 'csv'
 
   def self.import(file)

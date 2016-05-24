@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   resources :muscles do
     collection { post :import}
+    collection do
+      get 'search'
+    end
   end
 
   resources :symptoms
