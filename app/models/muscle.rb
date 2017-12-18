@@ -1,6 +1,6 @@
 class Muscle < ActiveRecord::Base
   has_many :muscles_symptoms
-  has_many :symptoms, through: :muscles_symptoms
+  has_many :symptoms, through: :muscle_symptoms
 
   def self.search(search)
     where("name ILIKE ? OR symptoms ILIKE ? OR activation ILIKE ? OR common_diagnoses ILIKE ? OR lifestyle_considerations ILIKE ? OR quick_reference ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
