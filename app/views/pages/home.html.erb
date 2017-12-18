@@ -1,17 +1,27 @@
-<div class="container">
-
-
-
-<div class="jumbotron">
-  <h1>Trigger Point - Tutorial</h1>
-  <p>A guide to self-treatment for pain.</p>
-    <button type="button" class="btn btn-default"><%= link_to "Search By Muscle", muscles_path %></button>
-    
-
-   
+<div class="container-fluid">
+  <div class="row background-yellow">
+    <h1 class="text-center">Trigger Point Tutorial</h1>
+    <h2 class="text-center">A guide to self-treatment for pain.</h2>
+    <br>
+    <p class="text-center">
+      <%= link_to 'Search By Muscle', muscles_path, class: "btn btn btn-primary-outline btn-lg" %>
+      <%= link_to 'Search By Complaint', muscles_path, class: "btn btn btn-primary-outline btn-lg" %>
+      <%= link_to 'Search By Sport', muscles_path, class: "btn btn btn-primary-outline btn-lg"  %>
+   </p>
+      <br>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+      <%= link_to image_tag('yoga.jpg', class: "img-responsive",alt: 'yoga'), title: 'Trigger Points for Yoga', title: 'Trigger Points for Yoga', rel: 'Trigger Points for Yoga', relative: true %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to image_tag('running.jpg', class: "img-responsive",alt: 'yoga'), title: 'Trigger Points for Yoga', title: 'Trigger Points for Yoga', rel: 'Trigger Points for Yoga', relative: true %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to image_tag('rockclimbing.jpg', class: "img-responsive",alt: 'yoga'), title: 'Trigger Points for Yoga', title: 'Trigger Points for Yoga', rel: 'Trigger Points for Yoga', relative: true %>
+    </div>
+  </div>
+  
 </div>
 
-
-
-    
-</div>

@@ -10,7 +10,7 @@
   <%= markdown(@symptom.description) %>
 
 
-  <%= link_to 'Back', symptoms_path %>
+  <%= link_to 'Back', symptoms_path %> |
 <% if admin_signed_in? %>
   <%= link_to 'Edit', edit_symptom_path %>
 <% end %>

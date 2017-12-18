@@ -23,6 +23,15 @@ class MusclesController < ApplicationController
 		@muscle = Muscle.find(params[:id])
 	end
 
+	def next
+    Muscle.where("id > ?", id).limit(1).first
+  end
+
+  def prev
+    Muscle.where("id < ?", id).limit(1).first
+  end
+
+
 	def new
 		@muscle = Muscle.new
 	end
